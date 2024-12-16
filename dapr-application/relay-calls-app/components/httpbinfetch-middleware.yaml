@@ -1,0 +1,7 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: httpbinfetch
+spec:
+  type: middleware.http.httpbinfetch
+  version: v1

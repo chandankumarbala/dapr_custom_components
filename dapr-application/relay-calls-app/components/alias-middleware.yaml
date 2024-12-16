@@ -1,0 +1,13 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: routeralias
+spec:
+  type: middleware.http.routeralias
+  version: v1
+  metadata:
+  - name: "routes"
+    value: |
+      {
+        "/intercept/by/sidecar": "/v1.0/invoke/relay-calls/method/send-data"
+      }

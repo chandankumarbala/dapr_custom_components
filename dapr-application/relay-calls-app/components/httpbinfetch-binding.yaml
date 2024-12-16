@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: httpbinfetch-binding
+spec:
+  type: bindings.httpbinfetch
+  version: v1
+  metadata:
+  - name: endpoint
+    value: dapr-kafka.kafka:9092
+  - name: profile
+    value: devportal
+  - name: apikey
+    value: sdfsfsdfsf535345353

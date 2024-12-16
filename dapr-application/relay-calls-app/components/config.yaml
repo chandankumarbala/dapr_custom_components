@@ -1,0 +1,13 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: appconfig
+spec:
+  httpPipeline:
+    handlers:
+    - name: routeralias
+      type: middleware.http.routeralias
+#    - name: httpbinfetch
+#      type: middleware.http.httpbinfetch  
+    - name: customprinter
+      type: middleware.http.customprinter      

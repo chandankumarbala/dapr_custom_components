@@ -1,0 +1,11 @@
+### GET /echo endpoint app directly (no Auth header)
+GET http://localhost:3000/echo?text=hello
+
+### GET fetch-resource endpoint app directly (will fail)
+GET http://localhost:3000/fetch-resource
+
+### GET /echo endpoint via Dapr Service invocation
+GET http://localhost:3500/v1.0/invoke/echo-app/method/echo?text=hello
+
+### GET data from the resource server via Dapr Service invocation
+GET http://localhost:3500/v1.0/invoke/echo-app/method/fetch-resource

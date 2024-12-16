@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relay_calls
+  labels:
+    app: echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: relay_calls
+  template:
+    metadata:
+      labels:
+        app: relay_calls
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "relay_calls"
+        dapr.io/app-port: "3000"
+        dapr.io/config: "appconfig"
+        dapr.io/log-level: "debug"
+    spec:
+      containers:
+      - name: relay_calls
+        image: relay_calls:1.0
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
