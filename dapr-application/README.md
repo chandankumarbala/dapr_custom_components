@@ -17,8 +17,8 @@ make DEBUG=1 build
 dapr run --enable-api-logging  --app-id relay-calls  --dapr-http-port 3500 --app-port 3000 --resources-path ./components --config ./components/config.yaml --log-level debug  -- node index.js
 
 
-$ ./tester.sh
-Without binding: 1010.82mill / with binding: 243.06mill
+- $ ./tester.sh
+- Without binding: 1010.82mill / with binding: 243.06mill
 Without binding: 1231.89mill / with binding: 243.39mill
 Without binding: 1078.84mill / with binding: 243.49mill
 Without binding: 804.31mill / with binding: 711.75mill
