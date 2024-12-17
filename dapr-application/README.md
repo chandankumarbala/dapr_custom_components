@@ -17,7 +17,7 @@ make DEBUG=1 build
 dapr run --enable-api-logging  --app-id relay-calls  --dapr-http-port 3500 --app-port 3000 --resources-path ./components --config ./components/config.yaml --log-level debug  -- node index.js
 
 
-__ Direct calls from the container vs Conatiner to sidecar calls to same external resource. __
+## Direct calls from the container vs Conatiner to sidecar calls to same external resource. ##
 - $ ./tester.sh
 - Without binding: 1010.82mill / with binding: 243.06mill
 - Without binding: 1231.89mill / with binding: 243.39mill
